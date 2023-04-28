@@ -1,0 +1,25 @@
+import java.util.*;
+
+class Main {
+    static boolean checkBit(int n , int i){
+        if((n&(1<<i))==0){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    static int countBit(int n){
+        int count = 0;
+        for(int i = 0; i<=31 ; i++){
+            if(checkBit(n,i)==true){
+                count++;
+            }
+        }
+        return count;
+    }
+    public static void main(String args[]) {
+      int n = 512;
+      System.out.println(countBit(n));
+    }
+}
